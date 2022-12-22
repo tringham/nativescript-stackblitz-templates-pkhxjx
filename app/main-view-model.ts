@@ -2,7 +2,7 @@ import { Observable, Image } from '@nativescript/core';
 
 import * as camera  from '@nativescript/camera';
 //import * as firebase from 'firebase';
-import { firebase } from "@nativescript/firebase";
+import * as firebase  from "nativescript-plugin-firebase";
 
 export class HelloWorldModel extends Observable {
   private _counter: number;
