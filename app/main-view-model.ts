@@ -2,7 +2,7 @@ import { Observable, Image } from '@nativescript/core';
 
 import * as camera  from '@nativescript/camera';
 //import * as firebase from 'firebase';
-import * as firebase  from "nativescript-plugin-firebase";
+//import * as firebase  from "nativescript-plugin-firebase";
 
 export class HelloWorldModel extends Observable {
     private _counter: number;
@@ -34,21 +34,21 @@ export class HelloWorldModel extends Observable {
         this.updateMessage();
     }
 
-  private async updateMessage() {
-      if (this._counter <= 0) {
-          this.message = 'Hoorraaay!';
-      } else {
-          this.message = `${this._counter} taps left`;
-      }
-      let imageAsset = await camera.takePicture()
+    updateMessage() {
+        if (this._counter <= 0) {
+            this.message = 'Hoorraaay!';
+        } else {
+            this.message = `${this._counter} taps left`;
+        }
+        //let imageAsset = await camera.takePicture()
 
-      this.message = "Result is an image asset ";
-      var image = new Image();
-      image.src = imageAsset;
-      let result = await firebase.mlkit.textrecognition.recognizeTextOnDevice({image: image })
-      this.message = result.text ? result.text : "";
-    
-      // log the message to the console
-      console.log(this.message);
+        this.message = "Result is an image asset ";
+        //var image = new Image();
+        //image.src = imageAsset;
+        //let result = await firebase.mlkit.textrecognition.recognizeTextOnDevice({image: image })
+        //this.message = result.text ? result.text : "";
+      
+        // log the message to the console
+        console.log(this.message);
     }
 }

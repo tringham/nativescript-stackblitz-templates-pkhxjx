@@ -2,7 +2,7 @@
     <ActionBar title="My App2" icon="" />
 
     <StackLayout class="p-4">
-        <Label text="Version 219" class="text-3xl text-center" />
+        <Label text="Version 229" class="text-3xl text-center" />
         <Button text="TAP" tap="{{ onTap }}" class="-primary" />
         <Label text="{{ message }}" class="text-lg text-center text-gray-400" textWrap="true" />
     </StackLayout>
